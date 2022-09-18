@@ -3,60 +3,29 @@ require 'rails_helper'
 
 RSpec.describe Book, type: :model do
   subject do
-    described_class.new(title: 'harry potter', author: 'jk rowling', price: '10.23')
+    described_class.new(title: 'Lord of the Rings', author: 'J.R.R. Tolkien', price: '10.23', date: '0000-00-00')
   end
 
-  it 'is valid with valid attributes' do
+  it 'is valid with all valid attributes' do
     expect(subject).to be_valid
   end
 
-  it 'is not valid without a name' do
+  it 'is not valid without a title' do
     subject.title = nil
     expect(subject).not_to be_valid
   end
-end
 
-RSpec.describe Book, type: :model do
-  subject do
-    described_class.new(title: 'harry potter', author: 'jk rowling', price: '10.23')
-  end
-
-  it 'is valid with valid attributes' do
-    expect(subject).to be_valid
-  end
-
-  it 'is not valid without an author' do
+  it 'is not valid without a title' do
     subject.author = nil
     expect(subject).not_to be_valid
   end
-end
 
-RSpec.describe Book, type: :model do
-  subject do
-    described_class.new(title: 'harry potter', author: 'jk rowling', price: '10.23')
-  end
-
-  it 'is valid with valid attributes' do
-    expect(subject).to be_valid
-  end
-
-  it 'is not valid without a price' do
+  it 'is not valid without a title' do
     subject.price = nil
     expect(subject).not_to be_valid
   end
-end
 
-RSpec.describe Book, type: :model do
-  subject do
-    described_class.new(title: 'harry potter', author: 'jk rowling', price: '10.23')
-  end
-
-  it 'is valid with valid attributes' do
-    expect(subject).to be_valid
-  end
-
-  it 'is not valid without a date' do
+  it 'is not valid without a title' do
     subject.date = nil
     expect(subject).not_to be_valid
   end
-end
