@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    validates :title, :author, :price, :date presence: true
+    validates :title, :author, :price, :date, presence: true
 end
 
 # add date
