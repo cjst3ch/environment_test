@@ -7,7 +7,7 @@ RSpec.describe 'Creating a book', type: :feature do
     fill_in 'Title', with: 'Lord of the Rings'
     fill_in 'Author', with: 'J.R.R. Tolkein'
     fill_in 'Price', with: '10.56'
-    fill_in 'Published date', with: '0000-00-00'
+    fill_in 'Date Published', with: '0000-00-00'
     click_on 'Create Book'
     visit books_path
     expect(page).to have_content('Lord of the Rings')
